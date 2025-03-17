@@ -1,14 +1,14 @@
 .nav1 {
-    margin-left: -9px;
-    margin-top: -9px;
-    width: 1281px;
+    margin-left: 0px;
+    
+        width: 100%;
+        max-width: 1281px; 
     background-color: #ff6d2f; 
     color: #ffffff; 
-    height: 50px; ;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between; 
-
 }
 
 .home-link {
@@ -26,38 +26,77 @@
 }
 
 .list1 li {
-    
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s ease;
     padding-right: 50px;
     display: flex;
+    position: relative;
+    padding-right: 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.aa{
+
+.aa {
     text-decoration: none;
     color: #ffffff; 
 }
-.list1 li :hover{
+
+.list1 li:hover .aa {
     color: #000000;
     transition: background-color 0.3s ease;
     border-radius: 4px;
 }
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    min-width: 150px;
+    display: none;
+    flex-direction: column;
+    z-index: 100;
+    padding: 5px 0;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-item {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.dropdown-item:hover {
+    background: lightgray;
+}
+
+/* Responsive design */
 @media (max-width: 390px) {
     .nav1 {
         width: 100%;
         padding: 10px;
         flex-direction: column;
         height: auto;
-        background-color: #ff6d2f; 
     }
 
     .home-link {
         font-size: 14px;
         text-align: center;
         padding: 5px 0;
-        color: white; 
-        text-decoration: none; 
     }
 
     .list1 {
@@ -70,6 +109,41 @@
     .list1 li {
         font-size: 13px;
         padding-right: 0;
-        list-style-type: none; 
+        list-style-type: none;
     }
+
+    /* Dropdown for mobile */
+    .dropdown-menu {
+        position: static;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .dropdown-item {
+        background: none;
+        color: white;
+        text-align: center;
+    }
+
+    .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: inherit; 
+}
+
+.logout-btn:hover {
+    text-decoration: underline;
 }

@@ -1,11 +1,16 @@
+body {
+    overflow-x: hidden;
+}
+
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    background-color: #fff;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+    padding: 10px;
+
     width: 100%;
     margin: 0 auto;
+    max-width: 1200px; 
 }
 
 .product-item {
@@ -19,6 +24,8 @@
     justify-content: space-between;
     transition: transform 0.3s ease;
     position: relative;
+    width: 85%;
+    margin: 0 auto; 
 }
 
 .product-item:hover {
@@ -60,16 +67,35 @@
     color: #ff6d2f;
 }
 
-/* Responsive styles for iPhone 12 Pro */
+.next-row-button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.next-row-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff6d2f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.next-row-button:hover {
+    background-color: #251a1a;
+}
+
 @media (max-width: 390px) {
     .product-grid {
-        grid-template-columns: 1fr; /* Single column for narrow screens */
-        gap: 10px;
-        padding: 10px;
+        grid-template-columns: 1fr; 
+        padding: 5px;
     }
 
     .product-item {
         padding: 10px;
+        width: 90%;
     }
 
     .product-item p {
@@ -83,5 +109,10 @@
     .product-item a {
         font-size: 14px;
         padding: 6px 10px;
+    }
+
+    .next-row-button {
+        padding: 8px 16px;
+        font-size: 14px;
     }
 }

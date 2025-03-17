@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./admin.css"; 
-import Navbar from "./navbar";
 
 const Admin = () => {
     return (
         <>
-        <Navbar/>
         <div className="admin-dashboard">
             <div className="sidebar">
                 <h2>Admin Panel</h2>

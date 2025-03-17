@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./manageProducts.css";
-import Navbar from "./navbar";
 
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
@@ -36,7 +35,6 @@ const ManageProducts = () => {
 
     return (
         <>
-        <Navbar/>
         <div className="manage-products">
             <h1>Manage Products</h1>
             <div className="form-container">
